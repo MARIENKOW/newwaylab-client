@@ -1,0 +1,10 @@
+export const ADMIN_PASSWORD_MAX_LENGTH = 30;
+export const ADMIN_PASSWORD_MIN_LENGTH = 6;
+
+export const PRODUCT_LINE_NAME_MAX_LENGTH = 100;
+
+export const NFT_NAME_MIN_LENGTH = 2;
+export const NFT_NAME_MAX_LENGTH = 100;
+
+export const NFT_DESCRIPTION_MAX_LENGTH = 1000;
+
