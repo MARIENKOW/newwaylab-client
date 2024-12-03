@@ -14,6 +14,10 @@ export default class ProductLineService {
          const res = await axios.get(PRODUCT_API_URL + "/");
          return res;
       };
+      this.getAllWithItems = async () => {
+         const res = await axios.get(PRODUCT_API_URL + "/"+'with-items');
+         return res;
+      };
 
       this.update = async (id, value) => {
          const res = await $api.put(PRODUCT_API_URL + "/" + id, value);

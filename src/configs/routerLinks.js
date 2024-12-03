@@ -4,6 +4,7 @@ export const BLOG_ROUTE = "/blog";
 export const ADMIN_ROUTE = "/admin";
 export const ADMIN_BLOG_ROUTE = ADMIN_ROUTE + "/blog";
 export const ADMIN_PRODUCTLINE_ROUTE = ADMIN_ROUTE + "/productline";
+export const ADMIN_CONTACT_ROUTE = ADMIN_ROUTE + "/contact";
 export const ADMIN_PRODUCTLINE_UPDATE_ROUTE =
    ADMIN_PRODUCTLINE_ROUTE + "/update";
 export const ADMIN_PRODUCTLINE_CREATE_ROUTE =

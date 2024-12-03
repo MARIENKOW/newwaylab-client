@@ -63,5 +63,5 @@ export default function ProductLineItemUpdate() {
       }
    };
 
-   return <ProductLineForm data ={data} title='Редагувати Продуктову Лінійку' onSubmit={onSubmit} />
+   return <ProductLineForm btn={'Змінити'} data ={data} title='Редагувати Продуктову Лінійку' onSubmit={onSubmit} />
 }

@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import Link from "next/link";
 import {
    ADMIN_BLOG_ROUTE,
+   ADMIN_CONTACT_ROUTE,
    ADMIN_PRODUCTLINE_ROUTE,
 } from "../../../configs/routerLinks";
 
@@ -23,6 +24,9 @@ export default function Page() {
             </Link>
             <Link href={ADMIN_PRODUCTLINE_ROUTE}>
                <Button fullWidth>Лінійки товарів</Button>
+            </Link>
+            <Link href={ADMIN_CONTACT_ROUTE}>
+               <Button fullWidth>Контактна інформація</Button>
             </Link>
          </ButtonGroup>
       </InCenter>

@@ -13,7 +13,8 @@ export const STF = styled(TextField)(({ theme, error }) => ({
       },
    },
    "& .MuiFilledInput-root": {
-      background: theme.palette.secondary.contrastText,
+      background: theme.palette.background.light,
+
       borderBottomColor: theme.palette.secondary.main,
       "& .MuiInputAdornment-root": {
          "& p": {
@@ -33,8 +34,9 @@ export const STF = styled(TextField)(({ theme, error }) => ({
             : theme.palette.secondary.main,
       },
       "&:hover": {
-         background: theme.palette.background.light,
          borderBottomColor: theme.palette.secondary.main,
+         background: theme.palette.secondary.contrastText,
+
          "&:before": {
             borderBottomColor: error
                ? theme.palette.error.main
@@ -68,7 +70,8 @@ export const StyledTextField = ({
    register,
    label,
    options,
-   errMessage = "incorrect data",
+   errMessage = "некоректно заповнене поле",
+   helperMessage = "необов'язкове поле",
    helper = false,
 }) => {
    return (
@@ -80,7 +83,7 @@ export const StyledTextField = ({
          helperText={
             errors?.[register.name]
                ? errors?.[register.name]?.message || errMessage
-               : helper && errMessage
+               : helper && helperMessage
          }
          variant="filled"
       />

@@ -18,7 +18,8 @@ export const StyledFormControl = styled(FormControl)(({ theme, error }) => ({
       color: theme.palette.secondary.main,
    },
    "& .MuiInputBase-root": {
-      background: theme.palette.secondary.contrastText,
+      background: theme.palette.background.light,
+
       borderBottomColor: theme.palette.secondary.main,
       "& .MuiSvgIcon-root": {
          color: error ? theme.palette.error.main : theme.palette.secondary.main,
@@ -46,7 +47,8 @@ export const StyledFormControl = styled(FormControl)(({ theme, error }) => ({
             : theme.palette.secondary.main,
       },
       "&:hover": {
-         background: theme.palette.secondary.contrastText,
+      background: theme.palette.secondary.contrastText,
+
          borderBottomColor: theme.palette.secondary.main,
          "& .MuiSvgIcon-root": {
             color: error

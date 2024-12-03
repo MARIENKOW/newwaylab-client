@@ -42,7 +42,7 @@ export const Header = () => {
                   </Link>
 
                   <Link href={ITEM_ROUTE}>
-                     <StyledLink>Товари</StyledLink>
+                     <StyledLink>Лінійки товарів</StyledLink>
                   </Link>
                   <Link href={BLOG_ROUTE}>
                      <StyledLink>Блог</StyledLink>

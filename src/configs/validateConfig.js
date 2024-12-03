@@ -8,3 +8,13 @@ export const NFT_NAME_MAX_LENGTH = 100;
 
 export const NFT_DESCRIPTION_MAX_LENGTH = 1000;
 
+export const EMAIL_MAX_LENGTH = 100;
+export const EMAIL_PATTERN =
+   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+export const PHONE_MIN_LENGTH = 10;
+export const PHONE_MAX_LENGTH = 10;
+export const PHONE_PATTERN = /^[0-9]+$/;
+
+export const NAME_MAX_LENGTH = 30;
+export const NAME_MIN_LENGTH = 2;

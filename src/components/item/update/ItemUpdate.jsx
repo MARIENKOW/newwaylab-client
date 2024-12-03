@@ -87,5 +87,5 @@ export default function ItemUpdate() {
    //    }
    // };
 
-   return <ProductLineForm data ={data} title='Редагувати Продуктову Лінійку' onSubmit={onSubmit} />
+   return <ProductLineForm btn={'Змінити'} data ={data} title='Редагувати Продуктову Лінійку' onSubmit={onSubmit} />
 }

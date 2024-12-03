@@ -53,7 +53,7 @@ export const themeSettings = {
       },
       background: {
          main: "#bebebe",
-         dark: "#8f8f8f",
+         dark: "#e9e9e9",
          light: '#fff',
          contrastText: grey[900],
       },

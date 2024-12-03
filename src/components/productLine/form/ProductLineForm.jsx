@@ -13,6 +13,7 @@ export default function ProductLineForm({
    data = {},
    title = "Додати Продуктову Лінійку",
    onSubmit,
+   btn = 'Додати'
 }) {
    const {
       handleSubmit,
@@ -67,7 +68,7 @@ export default function ProductLineForm({
                sx={{ mt: errors?.root?.server ? 0 : 3 }}
                variant="contained"
             >
-               Додати
+               {btn}
             </StyledLoadingButton>
          </form>
       </InCenter>

@@ -83,7 +83,7 @@ export default function () {
             options={[
                { name: "Продуктові Лінійки", link: ADMIN_PRODUCTLINE_ROUTE },
                {
-                  name: data?.name,
+                  name: data?.productLine?.name,
                   link: ADMIN_PRODUCTLINE_ROUTE + "/" + data?.productLine_id,
                },
                {
@@ -91,7 +91,7 @@ export default function () {
                },
             ]}
          />
-         {<ItemForm data={data} onSubmit={onSubmit} />}
+         {<ItemForm title="Редагувати товар" btn="змінити" data={data} onSubmit={onSubmit} />}
       </ContainerComponent>
    );
 }

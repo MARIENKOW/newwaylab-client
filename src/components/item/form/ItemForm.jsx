@@ -13,6 +13,7 @@ export default function ItemForm({
    data = {},
    title = "Додати Товар",
    onSubmit,
+   btn = 'Додати'
 }) {
 
    const {
@@ -84,7 +85,7 @@ export default function ItemForm({
                sx={{ mt: errors?.root?.server ? 0 : 3 }}
                variant="contained"
             >
-               Додати
+               {btn}
             </StyledLoadingButton>
          </form>
       </InCenter>
