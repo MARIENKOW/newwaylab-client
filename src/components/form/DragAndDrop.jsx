@@ -69,6 +69,8 @@ function DragAndDrop({
       setValue(name, null, { shouldValidate: true });
    };
 
+   console.log('dddddddddddddddddddd');
+
    return (
       <Controller
          control={control}

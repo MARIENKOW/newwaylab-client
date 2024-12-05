@@ -57,7 +57,7 @@ export default function () {
       } catch (e) {
          console.error(e);
          if (e?.response?.status === 404) {
-            enqueueSnackbar(`Продуктову Лінійку видалено!`, {
+            enqueueSnackbar(`Продуктову Лінійку не знайдено!`, {
                variant: "error",
             });
             router.push(ADMIN_PRODUCTLINE_ROUTE);

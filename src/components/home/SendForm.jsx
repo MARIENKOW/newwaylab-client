@@ -122,7 +122,7 @@ export default function SendForm({ children }) {
                   <StyledNumberField
                      label="Номер телефону"
                      register={register("phone", {
-                        required: "required field",
+                        required: "обов'язкове поле",
                         // pattern: {
                         //    value: NFT_PRICE_PATTERN,
                         //    message:

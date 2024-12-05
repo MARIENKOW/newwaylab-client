@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Button, useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
@@ -10,12 +10,13 @@ import Home from "@mui/icons-material/Home";
 import { StyledLink } from "./StyledLink";
 import Link from "next/link";
 import { BLOG_ROUTE, ITEM_ROUTE, MAIN_ROUTE } from "../configs/routerLinks";
+import Image from "next/image";
 
 export const Header = () => {
-   const theme = useTheme()
+   const theme = useTheme();
    return (
       // <Box mb={2}>
-      <AppBar sx={{ mb: 2 }} color={theme.palette.background.main} position="static">
+      <AppBar color={theme.palette.background.main} position="static">
          <ContainerComponent sx={{ p: { xs: 0 } }}>
             <Toolbar
                sx={{
@@ -30,6 +31,7 @@ export const Header = () => {
                      sx={{ width: 50, height: 50 }}
                      component={"img"}
                      src="./logo.png"
+                     alt="newWaylogo"
                   />
                </Link>
 

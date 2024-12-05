@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Loading.module.scss'
 import { CircularProgress } from '@mui/material';
 

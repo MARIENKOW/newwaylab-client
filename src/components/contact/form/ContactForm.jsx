@@ -17,12 +17,11 @@ import { StyledAlert } from "../../form/StyledAlert";
 import { StyledNumberField } from "../../form/StyledNumberField";
 import { StyledTextField } from "../../form/StyledTextField";
 import { StyledLoadingButton } from "../../form/StyledLoadingButton";
+import { useRouter } from "next/navigation";
 
 const site = new SiteService();
 
-const ContactForm = ({ data }) => {
-   const theme = useTheme();
-
+const ContactForm = ({ data = {} }) => {
    const {
       handleSubmit,
       register,
@@ -31,15 +30,15 @@ const ContactForm = ({ data }) => {
       reset,
 
       formState: { errors, isValid, isSubmitting, isDirty, dirtyFields },
-   } = useForm({ mode: "onChange", defaultValues: { ...data } });
+   } = useForm({
+      mode: "onChange",
+      defaultValues: { ...data },
+   });
 
-   // useEffect(() => {
-   //    reset({ name });
-   // }, [name]);
-
-   const onSubmit = async (data) => {
+   const onSubmit = async (val) => {
       try {
-         await site.setContactLinks(data);
+         const { data } = await site.setContactLinks(val);
+         reset({ ...data });
          enqueueSnackbar(`Посилання змінено!`, { variant: "success" });
       } catch (error) {
          console.log(error);
@@ -50,10 +49,15 @@ const ContactForm = ({ data }) => {
             }
             return;
          }
-         setError("root.server", {
-            type: "server",
-            message: "Упс! Щось пішло не так, спробуйте пізніше",
-         });
+         try {
+            const { data } = await site.getContactLinks();
+            reset({ ...data });
+            enqueueSnackbar(`Упс! Щось пішло не так, спробуйте пізніше!`, {
+               variant: "error",
+            });
+         } catch (error) {
+            location.reload();
+         }
       }
    };
 
@@ -80,7 +84,12 @@ const ContactForm = ({ data }) => {
          </Typography> */}
          <form
             onChange={handleChange}
-            style={{ display: "flex", flexDirection: "column", gap: "15px",flex:'0 1 500px' }}
+            style={{
+               display: "flex",
+               flexDirection: "column",
+               gap: "15px",
+               flex: "0 1 500px",
+            }}
             onSubmit={handleSubmit(onSubmit)}
          >
             <StyledTextField

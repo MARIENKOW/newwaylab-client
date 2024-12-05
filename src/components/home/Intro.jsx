@@ -51,9 +51,11 @@ export default function Intro() {
                               Лінійки товарів
                            </Button>
                         </Link>
-                        <Button size="large" variant={"outlined"}>
-                           замовити
-                        </Button>
+                        <Link href={'#contact'}>
+                           <Button size="large" variant={"outlined"}>
+                              замовити
+                           </Button>
+                        </Link>
                      </Box>
                   </Box>
                </Box>

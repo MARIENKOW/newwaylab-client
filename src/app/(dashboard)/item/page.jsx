@@ -7,13 +7,25 @@ import { Empty } from "../../../components/Empty";
 import ProductLineItemUser from "../../../components/productLine/item/ProductLineItemUser";
 import Contact from "../../../components/home/Contact";
 
-
 const productLine = new ProductLineService();
 
 export default async function Page() {
    try {
       const { data } = await productLine.getAllWithItems();
-      if (!data || data?.length === 0) return <Empty />;
+      if (!data || data?.length === 0)
+         return (
+            <>
+               <Box mt={6} mb={6}>
+                  <Empty />
+               </Box>
+               <Box>
+                  <ContainerComponent>
+                     <Contact />
+                  </ContainerComponent>
+               </Box>
+            </>
+         );
+
       return (
          <>
             <Box mt={6} mb={6}>
@@ -34,7 +46,18 @@ export default async function Page() {
       );
    } catch (error) {
       console.log(error);
-      return <ErrorElement message={error} />;
+      return (
+         <>
+            <Box mt={6} mb={6}>
+               <ErrorElement message={error} />
+            </Box>
+            <Box>
+               <ContainerComponent>
+                  <Contact />
+               </ContainerComponent>
+            </Box>
+         </>
+      );
    }
 }
 

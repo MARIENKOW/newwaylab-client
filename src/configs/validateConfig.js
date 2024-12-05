@@ -18,3 +18,9 @@ export const PHONE_PATTERN = /^[0-9]+$/;
 
 export const NAME_MAX_LENGTH = 30;
 export const NAME_MIN_LENGTH = 2;
+
+export const POST_TITLE_MAX_LENGTH = 255;
+export const POST_TITLE_MIN_LENGTH = 5;
+
+export const POST_BODY_MAX_LENGTH = 10000;
+export const POST_BODY_MIN_LENGTH = 300;

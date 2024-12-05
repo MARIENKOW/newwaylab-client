@@ -15,8 +15,7 @@ export default function ItemUser({ item }) {
          position={"relative"}
          display={"flex"}
          flexDirection={"column"}
-         borderColor={theme.palette.secondary.light}
-         border={"1px solid"}
+         border={"1px solid #bebebe"}
          borderRadius={4}
          gap={2}
          overflow={'hidden'}
