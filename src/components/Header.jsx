@@ -28,7 +28,7 @@ export const Header = () => {
             >
                <Link href={MAIN_ROUTE}>
                   <Box
-                     sx={{ width: 50, height: 50 }}
+                     sx={{ width: 70, height: 70 }}
                      component={"img"}
                      src="./logo.png"
                      alt="newWaylogo"

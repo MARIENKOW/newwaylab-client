@@ -9,7 +9,6 @@ export default function Home() {
          <Intro />
          <About />
          <Plus />
-         <Contact/>
       </>
    );
 }

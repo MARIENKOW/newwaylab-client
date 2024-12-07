@@ -54,9 +54,11 @@ const BlogItemUser = ({ Blog }) => {
                   </Grid>
                </Grid>
                <Typography
+                  component={"div"}
                   dangerouslySetInnerHTML={{ __html: Blog?.body }}
                   variant="body2"
                   color="text.secondary"
+                  sx={{ maxHeight: "150px", overflow: "hidden" }}
                />
             </CardContent>
          </Card>

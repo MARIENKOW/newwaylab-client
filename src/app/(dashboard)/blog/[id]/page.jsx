@@ -52,9 +52,6 @@ export default async function Page({ params }) {
                   </Box>
                </ContainerComponent>
             </Box>
-            <ContainerComponent>
-               <Contact />
-            </ContainerComponent>
          </Box>
       );
    } catch (error) {

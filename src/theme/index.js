@@ -18,13 +18,15 @@ const colors = {
 };
 
 export const themeSettings = {
+   typography: {
+      fontFamily: "inherit",
+   },
    palette: {
       primary: {
          main: colors.pinkRose.DEFAULT,
          dark: colors.pinkRose[700],
          light: colors.pinkRose[300],
          contrastText: colors.pinkRose[50],
-         
       },
       secondary: {
          main: grey[900],
@@ -54,7 +56,7 @@ export const themeSettings = {
       background: {
          main: "#bebebe",
          dark: "#e9e9e9",
-         light: '#fff',
+         light: "#fff",
          contrastText: grey[900],
       },
    },

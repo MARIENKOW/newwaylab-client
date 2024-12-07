@@ -41,7 +41,7 @@ export default function Plus() {
                         color="secondary.main"
                         fontWeight={"500"}
                      >
-                        Великий асортимент продукції
+                        Великий асортимент
                      </Typography>
                      <Typography
                         maxWidth={"400px"}
@@ -50,8 +50,8 @@ export default function Plus() {
                         color="secondary.main"
                         lineHeight={"150%"}
                      >
-                        Ви виробляємо більше 10 серій ароматизаторів які
-                        задовільнять любого клієнта
+                        Ми виробляємо більше 50-ти смаків ароматизаторів різних
+                        об'ємів
                      </Typography>
                   </Grid>
                   <Grid
@@ -70,7 +70,7 @@ export default function Plus() {
                         color="secondary.main"
                         fontWeight={"500"}
                      >
-                        Лояльна цінова політика
+                        Система лояльності
                      </Typography>
                      <Typography
                         maxWidth={"400px"}
@@ -79,7 +79,10 @@ export default function Plus() {
                         color="secondary.main"
                         lineHeight={"150%"}
                      >
-                        Неперевершена якість за конкурентну ціну
+                        {/* Висока якість за чесну вартість. */}
+                        {/* Гнучкі умови співпраці */}
+                        Індивідуальний підхід до клієнтів, гнучкі умови
+                        співпраці
                      </Typography>
                   </Grid>
                   <Grid
@@ -98,7 +101,7 @@ export default function Plus() {
                         color="secondary.main"
                         fontWeight={"500"}
                      >
-                        Швидка відправка
+                        Гарантована доступність
                      </Typography>
                      <Typography
                         maxWidth={"400px"}
@@ -107,7 +110,7 @@ export default function Plus() {
                         color="secondary.main"
                         lineHeight={"150%"}
                      >
-                        Ми відправляємо замовлення швидко і якісно
+                        Постійна наявність товару, доставка без затримок.
                      </Typography>
                   </Grid>
                   <Grid
@@ -126,7 +129,7 @@ export default function Plus() {
                         color="secondary.main"
                         fontWeight={"500"}
                      >
-                        Документи
+                        Перевірена продукція
                      </Typography>
                      <Typography
                         maxWidth={"400px"}
@@ -135,8 +138,8 @@ export default function Plus() {
                         color="secondary.main"
                         lineHeight={"150%"}
                      >
-                        Всі наші продукти виробляються і поставляються офіційно,
-                        кожен з них має експертизу і відповідні сертифікати
+                        Продукти постачаються офіційно, мають необхідні
+                        сертифікати та експертизи.
                      </Typography>
                   </Grid>
                </Grid>

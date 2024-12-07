@@ -19,7 +19,10 @@ import FormatClearIcon from "@mui/icons-material/FormatClear";
 import Underline from "@tiptap/extension-underline";
 import { Box, FormHelperText, useTheme } from "@mui/material";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
+import Image from "@tiptap/extension-image";
 import { red } from "@mui/material/colors";
+import { useCallback } from "react";
+import CustomImage from "./CustomImg";
 
 const Tiptap = ({ error, value, onChange, setBody }) => {
    const theme = useTheme();
@@ -30,6 +33,12 @@ const Tiptap = ({ error, value, onChange, setBody }) => {
          FontFamily,
          TextStyle,
          Underline,
+         // Image.configure({
+         //    HTMLAttributes: {
+         //       class: "my-custom-paragraph",
+         //    },
+         // }),
+         CustomImage,
          TextAlign.configure({
             types: ["heading", "paragraph"],
          }),
@@ -42,6 +51,14 @@ const Tiptap = ({ error, value, onChange, setBody }) => {
       },
    });
 
+   const addImage = useCallback(() => {
+      const url = window.prompt("URL");
+
+      if (url) {
+         editor.chain().focus().setImage({ src: url }).run();
+      }
+   }, [editor]);
+
    return (
       <>
          <Box
@@ -52,6 +69,12 @@ const Tiptap = ({ error, value, onChange, setBody }) => {
             }}
          >
             <Box>
+               <IconButton
+                  // color={editor?.isActive("bold") ? "primary" : "secondary"}
+                  onClick={addImage}
+               >
+                  Img
+               </IconButton>
                <IconButton
                   color={editor?.isActive("bold") ? "primary" : "secondary"}
                   onClick={() => editor.chain().focus().toggleBold().run()}

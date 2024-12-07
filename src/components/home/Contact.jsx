@@ -26,7 +26,7 @@ export default async function Contact() {
 
       if (isEmptyData)
          return (
-            <Box id="contact" mb={6}>
+            <Box id="contact">
                <ContainerComponent>
                   <SendForm />
                </ContainerComponent>
@@ -34,7 +34,7 @@ export default async function Contact() {
          );
 
       return (
-         <Box id="contact" mb={6}>
+         <Box id="contact">
             <ContainerComponent>
                <Box
                   display={"flex"}
@@ -160,7 +160,7 @@ export default async function Contact() {
    } catch (error) {
       console.log(error);
       return (
-         <Box id="contact" mb={6}>
+         <Box id="contact">
             <ContainerComponent>
                <SendForm />
             </ContainerComponent>

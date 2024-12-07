@@ -46,14 +46,14 @@ export default function Intro() {
                         Україні
                      </Typography>
                      <Box display={"flex"} justifyContent={"center"} gap={2}>
-                        <Link href={ITEM_ROUTE}>
+                        <Link href={"#contact"}>
                            <Button size="large" variant={"contained"}>
-                              Лінійки товарів
+                              замовити
                            </Button>
                         </Link>
-                        <Link href={'#contact'}>
+                        <Link href={ITEM_ROUTE}>
                            <Button size="large" variant={"outlined"}>
-                              замовити
+                              Лінійки товарів
                            </Button>
                         </Link>
                      </Box>
@@ -63,7 +63,7 @@ export default function Intro() {
                   width={{ xs: "100%", md: "40%" }}
                   // flex={"0 0 50%"}
                   component={"img"}
-                  src="./intro.jpg"
+                  src="./intro.png"
                />
             </Box>
          </ContainerComponent>
