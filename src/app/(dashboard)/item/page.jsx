@@ -5,8 +5,9 @@ import Loading from "../../../components/loading/Loading";
 import ErrorElement from "../../../components/ErrorElement";
 import { Empty } from "../../../components/Empty";
 import ProductLineItemUser from "../../../components/productLine/item/ProductLineItemUser";
-import Contact from "../../../components/home/Contact";
 import WithTitleWrapper from "../../../components/wrappers/WithTitleWrapper";
+
+export const dynamic = "force-dynamic";
 
 const productLine = new ProductLineService();
 

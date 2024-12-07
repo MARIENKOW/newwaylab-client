@@ -5,11 +5,11 @@ import Contact from "../home/Contact";
 export default function WithTitleWrapper({ title, children }) {
    return (
       <>
-         <Box mt={10} mb={6}>
+         <Box mt={10}>
             <Typography
                textAlign={"center"}
                fontWeight={"600"}
-               mb={4}
+               mb={8}
                variant="h3"
                color="secondary.main"
                sx={{ fontSize: { xs: "34px", md: "42px" } }}

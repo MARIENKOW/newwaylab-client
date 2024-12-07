@@ -9,6 +9,8 @@ import ErrorElement from "../../../../components/ErrorElement";
 import SiteService from "../../../../services/SiteService";
 import ContactForm from "../../../../components/contact/form/ContactForm";
 
+export const dynamic = "force-dynamic";
+
 const site = new SiteService();
 
 export default async function Page() {

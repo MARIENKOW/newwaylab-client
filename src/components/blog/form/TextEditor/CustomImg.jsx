@@ -1,19 +1,3 @@
-// import Image from "@tiptap/extension-image";
-// import { NodeViewWrapper, ReactNodeViewRenderer } from "@tiptap/react";
-// // import "./Image.css";
-
-// function ImageNode(props) {
-//    const { src, alt } = props.node.attrs;
-
-//    return <img style={{ maxWidth: "100%" }} src={src} alt={alt} />;
-// }
-
-// export default Image.extend({
-//    addNodeView() {
-//       return ReactNodeViewRenderer(ImageNode);
-//    },
-// });
-
 import { Image } from "@tiptap/extension-image";
 import { mergeAttributes } from "@tiptap/react";
 

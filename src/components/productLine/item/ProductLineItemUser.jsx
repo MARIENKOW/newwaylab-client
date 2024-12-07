@@ -38,7 +38,7 @@ export default function ProductLineItemUser({ line }) {
 
    return (
       <Box mb={6}>
-         <Typography mb={3} variant="h4" color="secondary.main">
+         <Typography ml={3} mb={4} variant="h4" fontWeight={'500'} color="secondary.main">
             {line?.name}
          </Typography>
          <Box p={"0 25px"} position={"relative"}>

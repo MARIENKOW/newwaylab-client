@@ -5,7 +5,7 @@ import { ITEM_ROUTE } from "../../configs/routerLinks";
 
 export default function Intro() {
    return (
-      <Box mt={6} mb={6}>
+      <Box mt={6} mb={8}>
          <ContainerComponent>
             <Box
                display={"flex"}
@@ -63,7 +63,7 @@ export default function Intro() {
                   width={{ xs: "100%", md: "40%" }}
                   // flex={"0 0 50%"}
                   component={"img"}
-                  src="./intro.png"
+                  src="./intro1.png"
                />
             </Box>
          </ContainerComponent>

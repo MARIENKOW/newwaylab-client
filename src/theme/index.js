@@ -57,7 +57,7 @@ export const themeSettings = {
          main: "#bebebe",
          dark: "#e9e9e9",
          light: "#fff",
-         contrastText: grey[900],
+         contrastText: '#202020',
       },
    },
 };

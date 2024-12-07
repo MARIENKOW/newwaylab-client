@@ -9,8 +9,8 @@ export default function About() {
       <Box
          pt={3}
          pb={3}
-         sx={{ background: theme.palette.background.dark }}
-         mb={6}
+         // sx={{ background: theme.palette.background.dark }}
+         mb={8}
       >
          <ContainerComponent>
             <Box

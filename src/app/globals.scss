@@ -89,7 +89,12 @@ input[type="number"]:focus {
 
 /*! ______ОБНУЛЕНИЕ______ */
 
+html {
+   background-color: #202020;
+}
+
 body {
+   background-color: #fff;
    min-height: 100vh;
    display: flex;
    flex-direction: column;
