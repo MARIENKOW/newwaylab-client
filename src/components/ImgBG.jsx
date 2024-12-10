@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import img from './banner2.jpg'
 
 export default function ImgBG() {
    return (
@@ -23,7 +24,7 @@ export default function ImgBG() {
                   opacity: "0.2",
                }}
                component={"img"}
-               src="banner2.jpg"
+               src={img?.src}
             ></Box>
             <Box
                sx={{
