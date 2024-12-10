@@ -4,7 +4,7 @@ import { List } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { enqueueSnackbar } from "notistack";
-import DragAndDrop from "../../Form/DragAndDrop";
+import DragAndDrop from "../../form/DragAndDrop";
 import { StyledAlert } from "../../form/StyledAlert";
 import { StyledLoadingButton } from "../../form/StyledLoadingButton";
 import { StyledTextField } from "../../form/StyledTextField";
