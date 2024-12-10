@@ -7,7 +7,7 @@ import { StyledAlert } from "../../form/StyledAlert";
 import { StyledLoadingButton } from "../../form/StyledLoadingButton";
 import InCenter from "../../wrappers/InCenter";
 import { Controller } from "react-hook-form";
-import DragAndDrop from "../../Form/DragAndDrop";
+import DragAndDrop from "../../form/DragAndDrop";
 
 export default function ItemForm({
    data = {},
