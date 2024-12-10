@@ -17,7 +17,6 @@ export default async function Page() {
    try {
       const { data } = await site.getContactLinks();
       console.log(data);
-      if (!data || data?.length === 0) return <Empty />;
 
       console.log(data);
       return (
