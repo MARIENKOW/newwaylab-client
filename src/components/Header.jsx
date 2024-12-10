@@ -11,6 +11,7 @@ import Link from "next/link";
 import { BLOG_ROUTE, ITEM_ROUTE, MAIN_ROUTE } from "../configs/routerLinks";
 import { MenuItem, Menu, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import mainLogo from "./logo-white.png";
 import { useState } from "react";
 
 export const Header = () => {
@@ -45,7 +46,7 @@ export const Header = () => {
                   <Box
                      sx={{ width: 70, height: 70 }}
                      component={"img"}
-                     src="./logo-white.png"
+                     src={mainLogo}
                      alt="newWaylogo"
                   />
                </Link>
