@@ -48,17 +48,15 @@ export default function ProductLines() {
       setOpenBackdrop(true);
       try {
          await productLine.delete(id);
-         enqueueSnackbar(`Продуктову лінійку з назвою: "${name}" видалено`, {
-            variant: "success",
-         });
+
          try {
             await getAllLine();
          } catch (e) {
-            console.dir(e);
-            enqueueSnackbar("Упс! шось пішло не так. Перезавантажте сторінку", {
-               variant: "error",
-            });
+            throw new Error(e);
          }
+         enqueueSnackbar(`Продуктову лінійку з назвою: "${name}" видалено`, {
+            variant: "success",
+         });
       } catch (e) {
          console.dir(e);
          enqueueSnackbar("Упс! шось пішло не так", { variant: "error" });
@@ -66,12 +64,68 @@ export default function ProductLines() {
          setOpenBackdrop(false);
       }
    };
+   const handleUpProductLine = async ({ id, name }) => {
+      setOpenBackdrop(true);
+      try {
+         await productLine.up(id);
+
+         try {
+            await getAllLine();
+            console.log("set");
+         } catch (e) {
+            throw new Error(e);
+         }
+         enqueueSnackbar(
+            `Продуктову лінійку з назвою: "${name}" піднято на 1`,
+            {
+               variant: "success",
+            }
+         );
+      } catch (e) {
+         console.dir(e);
+         enqueueSnackbar("Упс! шось пішло не так. Перезавантажте сторінку", {
+            variant: "error",
+         });
+      } finally {
+         setOpenBackdrop(false);
+      }
+   };
+   const handleDownProductLine = async ({ id, name }) => {
+      setOpenBackdrop(true);
+      try {
+         await productLine.down(id);
+
+         try {
+            await getAllLine();
+            console.log("set");
+         } catch (e) {
+            throw new Error(e);
+         }
+         enqueueSnackbar(
+            `Продуктову лінійку з назвою: "${name}" знижено на 1`,
+            {
+               variant: "success",
+            }
+         );
+      } catch (e) {
+         console.dir(e);
+         enqueueSnackbar("Упс! шось пішло не так. Перезавантажте сторінку", {
+            variant: "error",
+         });
+      } finally {
+         setOpenBackdrop(false);
+      }
+   };
 
    return (
       <Box display={"flex"} flexDirection={"column"} gap={1}>
-         {data.map((line) => (
+         {data.map((line, i, arr) => (
             <ProductLineItem
+               upDisabled={i === 0}
+               downDisabled={i === arr.length - 1}
                deleteProductLine={handleClickDelite}
+               upProductLine={handleUpProductLine}
+               downProductLine={handleDownProductLine}
                key={line?.id}
                item={line}
             />

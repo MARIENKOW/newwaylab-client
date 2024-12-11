@@ -86,7 +86,7 @@ export default function Item({ item, deleteProductLine }) {
                vertical: "bottom",
                horizontal: "right",
             }}
-            keepMounted
+            // keepMounted
             transformOrigin={{
                vertical: "top",
                horizontal: "right",

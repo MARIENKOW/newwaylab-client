@@ -6,7 +6,10 @@ import {
    useTheme,
 } from "@mui/material";
 import Link from "next/link";
-import { ADMIN_PRODUCTLINE_ROUTE, ADMIN_PRODUCTLINE_UPDATE_ROUTE } from "../../../configs/routerLinks";
+import {
+   ADMIN_PRODUCTLINE_ROUTE,
+   ADMIN_PRODUCTLINE_UPDATE_ROUTE,
+} from "../../../configs/routerLinks";
 import { MenuItem, Menu } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useRef, useState } from "react";
@@ -15,26 +18,36 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { red } from "@mui/material/colors";
+import NorthIcon from "@mui/icons-material/North";
+import SouthIcon from "@mui/icons-material/South";
 
-export default function ProductLineItem({ item, deleteProductLine }) {
+export default function ProductLineItem({
+   item,
+   deleteProductLine,
+   upProductLine,
+   downProductLine,
+   upDisabled,
+   downDisabled,
+}) {
    const theme = useTheme();
-   const anchorEl = useRef();
-   const [open, setOpen] = useState(false);
+   const [anchorEl, setAnchorEl] = useState(false);
    const router = useRouter();
 
    const handleOpenNavMenu = (event) => {
-      setOpen(true);
+      console.log(event.target);
+      setAnchorEl(event.target);
       event.stopPropagation();
    };
 
    const handleCloseNavMenu = (event) => {
-      setOpen(false);
+      setAnchorEl(false);
       event.stopPropagation();
    };
 
    const handeClickItem = (id) => {
       router.push(ADMIN_PRODUCTLINE_ROUTE + "/" + id);
    };
+   console.log(open);
 
    return (
       <Box
@@ -95,7 +108,6 @@ export default function ProductLineItem({ item, deleteProductLine }) {
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
             color="inherit"
-            ref={anchorEl}
          >
             <MenuIcon />
          </IconButton>
@@ -104,20 +116,50 @@ export default function ProductLineItem({ item, deleteProductLine }) {
             MenuListProps={{
                "aria-labelledby": `menu-appbar-${item?.id}`,
             }}
-            open={open}
+            open={!!anchorEl}
             onClose={handleCloseNavMenu}
-            anchorEl={anchorEl.current}
+            anchorEl={anchorEl}
             sx={{ paddingBottom: 0 }}
             anchorOrigin={{
                vertical: "bottom",
                horizontal: "right",
             }}
-            keepMounted
+            // keepMounted
             transformOrigin={{
                vertical: "top",
                horizontal: "right",
             }}
          >
+            <MenuItem
+               disabled={upDisabled}
+               onClick={(event) => {
+                  event.stopPropagation();
+                  handleCloseNavMenu(event);
+                  upProductLine(item);
+               }}
+            >
+               <ListItemIcon>
+                  <NorthIcon />
+               </ListItemIcon>
+               <Typography textTransform="capitalize" textAlign="center">
+                  вверх
+               </Typography>
+            </MenuItem>
+            <MenuItem
+               disabled={downDisabled}
+               onClick={(event) => {
+                  event.stopPropagation();
+                  handleCloseNavMenu(event);
+                  downProductLine(item);
+               }}
+            >
+               <ListItemIcon>
+                  <SouthIcon />
+               </ListItemIcon>
+               <Typography textTransform="capitalize" textAlign="center">
+                  вниз
+               </Typography>
+            </MenuItem>
             <Link href={ADMIN_PRODUCTLINE_ROUTE + "/" + item?.id}>
                <MenuItem onClick={handleCloseNavMenu}>
                   <ListItemIcon>
@@ -141,6 +183,7 @@ export default function ProductLineItem({ item, deleteProductLine }) {
             <MenuItem
                sx={{ color: red[900], bgcolor: red[50] }}
                onClick={(event) => {
+                  event.stopPropagation();
                   handleCloseNavMenu(event);
                   deleteProductLine(item);
                }}
