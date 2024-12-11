@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { ContainerComponent } from "../wrappers/ContainerComponent";
 import Link from "next/link";
 import { ITEM_ROUTE } from "../../configs/routerLinks";
+import img from './intro1.png'
 
 export default function Intro() {
    return (
@@ -63,7 +64,7 @@ export default function Intro() {
                   width={{ xs: "100%", md: "40%" }}
                   // flex={"0 0 50%"}
                   component={"img"}
-                  src="./intro1.png"
+                  src={img.src}
                />
             </Box>
          </ContainerComponent>
