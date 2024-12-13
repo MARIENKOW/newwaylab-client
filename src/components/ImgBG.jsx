@@ -11,6 +11,12 @@ export default function ImgBG() {
             width: "100%",
             height: "100%",
             pointerEvents: "none",
+            "-webkit-touch-callout": "none" /* iOS Safari */,
+            "-webkit-user-select": "none" /* Chrome/Safari/Opera */,
+            "-khtml-user-select": "none" /* Konqueror */,
+            "-moz-user-select": "none" /* Firefox */,
+            "-ms-user-select": "none" /* Internet Explorer/Edge */,
+            "user-select": "none",
          }}
       >
          <Box
@@ -19,6 +25,12 @@ export default function ImgBG() {
                maxHeight: "100%",
                overflow: "hidden",
                pointerEvents: "none",
+               "-webkit-touch-callout": "none" /* iOS Safari */,
+               "-webkit-user-select": "none" /* Chrome/Safari/Opera */,
+               "-khtml-user-select": "none" /* Konqueror */,
+               "-moz-user-select": "none" /* Firefox */,
+               "-ms-user-select": "none" /* Internet Explorer/Edge */,
+               "user-select": "none",
             }}
          >
             <Box
