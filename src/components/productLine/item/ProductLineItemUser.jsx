@@ -84,7 +84,7 @@ export default function ProductLineItemUser({ line }) {
                }}
             >
                {line?.items?.map((item) => (
-                  <SwiperSlide key={item?.id}>
+                  <SwiperSlide style={{height:'auto'}} key={item?.id}>
                      <ItemUser item={item} />
                   </SwiperSlide>
                ))}
