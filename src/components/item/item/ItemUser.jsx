@@ -14,6 +14,7 @@ export default function ItemUser({ item }) {
          borderRadius={4}
          bgcolor={"#fff"}
          gap={2}
+         height={'100%'}
          overflow={"hidden"}
       >
          <Box component={"img"} src={item?.img?.path} alt={item?.img?.name} />
