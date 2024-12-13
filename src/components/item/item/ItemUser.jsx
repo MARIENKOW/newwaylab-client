@@ -15,7 +15,6 @@ export default function ItemUser({ item }) {
          bgcolor={"#fff"}
          gap={2}
          overflow={"hidden"}
-         height={"100%"}
       >
          <Box component={"img"} src={item?.img?.path} alt={item?.img?.name} />
          <Typography
@@ -26,6 +25,10 @@ export default function ItemUser({ item }) {
             textAlign={"center"}
             fontWeight={"400"}
             color="seccondary.main"
+            flex={1}
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'center'}
          >
             {item?.name}
          </Typography>

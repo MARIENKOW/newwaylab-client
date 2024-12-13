@@ -97,11 +97,7 @@ const BlogForm = ({ data = {}, onSubmit, btn = "Опублікувати" }) => 
                      maxLength: {
                         value: POST_BODY_MAX_LENGTH,
                         message: `максимум ${POST_BODY_MAX_LENGTH} символів`,
-                     },
-                     minLength: {
-                        value: POST_BODY_MIN_LENGTH,
-                        message: `мінімум ${POST_BODY_MIN_LENGTH} символів`,
-                     },
+                     }
                   }}
                   render={({
                      field: { onChange, value },
