@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ProductLineService from "../../services/ProductLineService";
-import Loading from "../loading/Loading";
 import { Empty } from "../Empty";
-import ErrorElement from "../ErrorElement";
-import ProductLineItem from "./item/Item";
 import { Box } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
 import { enqueueSnackbar } from "notistack";
@@ -47,10 +43,61 @@ export default function Items({ data, reload }) {
       }
    };
 
+   const handleUpItem = async ({ id, name }) => {
+      setOpenBackdrop(true);
+      try {
+         await item.up(id);
+
+         try {
+            await reload();
+            console.log("set");
+         } catch (e) {
+            throw new Error(e);
+         }
+         enqueueSnackbar(`Товар з назвою: "${name}" піднято на 1`, {
+            variant: "success",
+         });
+      } catch (e) {
+         console.dir(e);
+         enqueueSnackbar("Упс! шось пішло не так. Перезавантажте сторінку", {
+            variant: "error",
+         });
+      } finally {
+         setOpenBackdrop(false);
+      }
+   };
+   const handleDownItem = async ({ id, name }) => {
+      setOpenBackdrop(true);
+      try {
+         await item.down(id);
+
+         try {
+            await reload();
+            console.log("set");
+         } catch (e) {
+            throw new Error(e);
+         }
+         enqueueSnackbar(`Товар з назвою: "${name}" знижено на 1`, {
+            variant: "success",
+         });
+      } catch (e) {
+         console.dir(e);
+         enqueueSnackbar("Упс! шось пішло не так. Перезавантажте сторінку", {
+            variant: "error",
+         });
+      } finally {
+         setOpenBackdrop(false);
+      }
+   };
+
    return (
-      <Box display={"flex"} flexWrap={'wrap'} gap={1}>
-         {data.map((el) => (
+      <Box display={"flex"} flexWrap={"wrap"} gap={1}>
+         {data.map((el, i, arr) => (
             <Item
+               upDisabled={i === 0}
+               downDisabled={i === arr.length - 1}
+               upItem={handleUpItem}
+               downItem={handleDownItem}
                deleteProductLine={handleClickDelite}
                key={el?.id}
                item={el}

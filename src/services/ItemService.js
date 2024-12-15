@@ -17,6 +17,14 @@ export default class ItemService {
          });
          return res;
       };
+      this.up = async (id) => {
+         const res = await $api.put(ITEM_API_URL + "/up/" + id);
+         return res;
+      };
+      this.down = async (id) => {
+         const res = await $api.put(ITEM_API_URL + "/down/" + id);
+         return res;
+      };
       this.delete = async (id) => {
          const res = await $api.delete(ITEM_API_URL + "/" + id);
          return res;

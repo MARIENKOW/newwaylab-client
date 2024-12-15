@@ -123,9 +123,9 @@ export default function ProductLines() {
             <ProductLineItem
                upDisabled={i === 0}
                downDisabled={i === arr.length - 1}
-               deleteProductLine={handleClickDelite}
                upProductLine={handleUpProductLine}
                downProductLine={handleDownProductLine}
+               deleteProductLine={handleClickDelite}
                key={line?.id}
                item={line}
             />

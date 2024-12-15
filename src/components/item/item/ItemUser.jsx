@@ -14,7 +14,7 @@ export default function ItemUser({ item }) {
          borderRadius={4}
          bgcolor={"#fff"}
          gap={2}
-         height={'100%'}
+         height={"100%"}
          overflow={"hidden"}
       >
          <Box component={"img"} src={item?.img?.path} alt={item?.img?.name} />
@@ -27,9 +27,9 @@ export default function ItemUser({ item }) {
             fontWeight={"400"}
             color="seccondary.main"
             flex={1}
-            display={'flex'}
-            alignItems={'center'}
-            justifyContent={'center'}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
          >
             {item?.name}
          </Typography>

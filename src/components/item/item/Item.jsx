@@ -14,8 +14,17 @@ import { useRouter } from "next/navigation";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import { red } from "@mui/material/colors";
+import NorthIcon from "@mui/icons-material/North";
+import SouthIcon from "@mui/icons-material/South";
 
-export default function Item({ item, deleteProductLine }) {
+export default function Item({
+   item,
+   deleteProductLine,
+   upItem,
+   downItem,
+   upDisabled,
+   downDisabled,
+}) {
    const theme = useTheme();
    const anchorEl = useRef();
    const [open, setOpen] = useState(false);
@@ -92,6 +101,36 @@ export default function Item({ item, deleteProductLine }) {
                horizontal: "right",
             }}
          >
+            <MenuItem
+               disabled={upDisabled}
+               onClick={(event) => {
+                  event.stopPropagation();
+                  handleCloseNavMenu(event);
+                  upItem(item);
+               }}
+            >
+               <ListItemIcon>
+                  <NorthIcon />
+               </ListItemIcon>
+               <Typography textTransform="capitalize" textAlign="center">
+                  вверх
+               </Typography>
+            </MenuItem>
+            <MenuItem
+               disabled={downDisabled}
+               onClick={(event) => {
+                  event.stopPropagation();
+                  handleCloseNavMenu(event);
+                  downItem(item);
+               }}
+            >
+               <ListItemIcon>
+                  <SouthIcon />
+               </ListItemIcon>
+               <Typography textTransform="capitalize" textAlign="center">
+                  вниз
+               </Typography>
+            </MenuItem>
             <Link href={ADMIN_ITEM_UPDATE_ROUTE + "/" + item?.id}>
                <MenuItem onClick={handleCloseNavMenu}>
                   <ListItemIcon>

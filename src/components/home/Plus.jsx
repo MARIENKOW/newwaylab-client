@@ -46,16 +46,7 @@ export default function Plus() {
                            variant="h5"
                            color="secondary.main"
                            fontWeight={"500"}
-                           sx={{
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
-                           }}
+                           className="rmUserSelect"
                         >
                            Великий асортимент
                         </Typography>
@@ -64,15 +55,8 @@ export default function Plus() {
                            sx={{
                               margin: "0 auto",
                               fontSize: "16px",
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
                            }}
+                           className="rmUserSelect"
                            textAlign={"center"}
                            color="secondary.main"
                            lineHeight={"150%"}
@@ -101,32 +85,16 @@ export default function Plus() {
                            variant="h5"
                            color="secondary.main"
                            fontWeight={"500"}
-                           sx={{
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
-                           }}
+                           className="rmUserSelect"
                         >
                            Система лояльності
                         </Typography>
                         <Typography
                            maxWidth={"400px"}
+                           className="rmUserSelect"
                            sx={{
                               margin: "0 auto",
                               fontSize: "16px",
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
                            }}
                            textAlign={"center"}
                            color="secondary.main"
@@ -158,16 +126,7 @@ export default function Plus() {
                            variant="h5"
                            color="secondary.main"
                            fontWeight={"500"}
-                           sx={{
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
-                           }}
+                           className="rmUserSelect"
                         >
                            Гарантована доступність
                         </Typography>
@@ -176,15 +135,8 @@ export default function Plus() {
                            sx={{
                               margin: "0 auto",
                               fontSize: "16px",
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
                            }}
+                           className="rmUserSelect"
                            textAlign={"center"}
                            color="secondary.main"
                            lineHeight={"150%"}
@@ -213,16 +165,7 @@ export default function Plus() {
                            variant="h5"
                            color="secondary.main"
                            fontWeight={"500"}
-                           sx={{
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
-                           }}
+                           className="rmUserSelect"
                         >
                            Перевірена продукція
                         </Typography>
@@ -231,15 +174,8 @@ export default function Plus() {
                            sx={{
                               margin: "0 auto",
                               fontSize: "16px",
-                              "-webkit-touch-callout": "none" /* iOS Safari */,
-                              "-webkit-user-select":
-                                 "none" /* Chrome/Safari/Opera */,
-                              "-khtml-user-select": "none" /* Konqueror */,
-                              "-moz-user-select": "none" /* Firefox */,
-                              "-ms-user-select":
-                                 "none" /* Internet Explorer/Edge */,
-                              "user-select": "none",
                            }}
+                           className="rmUserSelect"
                            textAlign={"center"}
                            color="secondary.main"
                            lineHeight={"150%"}
