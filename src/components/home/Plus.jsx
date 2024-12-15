@@ -37,6 +37,7 @@ export default function Plus() {
                      position={"relative"}
                      borderRadius={10}
                      overflow={"hidden"}
+                     sx={{ transform: "translateZ(0)" }}
                      gap={2}
                   >
                      <ImgBG />
@@ -77,6 +78,7 @@ export default function Plus() {
                      overflow={"hidden"}
                      position={"relative"}
                      borderRadius={10}
+                     sx={{ transform: "translateZ(0)" }}
                   >
                      <ImgBG />
                      <Box zIndex={"10"}>
@@ -118,6 +120,7 @@ export default function Plus() {
                      overflow={"hidden"}
                      position={"relative"}
                      borderRadius={10}
+                     sx={{ transform: "translateZ(0)" }}
                   >
                      <ImgBG />
                      <Box zIndex={"10"}>
@@ -154,6 +157,7 @@ export default function Plus() {
                      flexDirection={"column"}
                      justifyContent={"center"}
                      gap={2}
+                     sx={{ transform: "translateZ(0)" }}
                      overflow={"hidden"}
                      position={"relative"}
                      borderRadius={10}
