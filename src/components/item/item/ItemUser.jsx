@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Typography, useTheme } from "@mui/material";
+// import Image from "next/image";
 
 export default function ItemUser({ item }) {
    const theme = useTheme();
@@ -18,6 +19,9 @@ export default function ItemUser({ item }) {
          overflow={"hidden"}
       >
          <Box component={"img"} src={item?.img?.path} alt={item?.img?.name} />
+         {/* <Box position={"relative"} width={"100%"}>
+            <Image src={item?.img?.path} alt={item?.img?.name} layout="fill" />
+         </Box> */}
          <Typography
             pb={2}
             pl={1}

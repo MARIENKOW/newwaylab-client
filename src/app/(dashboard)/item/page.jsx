@@ -36,7 +36,7 @@ export default async function Page() {
       console.log(error);
       return (
          <WithTitleWrapper title={"Лінійки товарів"}>
-            <ErrorElement message={error} />
+            <ErrorElement />
          </WithTitleWrapper>
       );
    }

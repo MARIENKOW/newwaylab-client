@@ -5,6 +5,7 @@ import Loading from "../../components/loading/Loading";
 import Contact from "../../components/home/Contact";
 import { Box } from "@mui/system";
 import ImgBG from "../../components/ImgBG";
+import GoogleAnalytics from "../../components/GoogleAnalytics";
 
 export const dynamic = "force-dynamic";
 
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
    return (
       <>
          <Header />
+         <GoogleAnalytics />
          <Box
             position={"relative"}
             flex={1}
@@ -19,7 +21,7 @@ export default function RootLayout({ children }) {
             flexDirection={"column"}
             overflow={"hidden"}
          >
-            <ImgBG/>
+            <ImgBG />
             <Box position={"relative"} zIndex={"10 "}>
                <Suspense fallback={<Loading />}>{children}</Suspense>
                <Box mt={16} mb={8}>
@@ -27,6 +29,7 @@ export default function RootLayout({ children }) {
                </Box>
             </Box>
          </Box>
+
          <Footer />
       </>
    );

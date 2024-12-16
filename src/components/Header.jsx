@@ -12,7 +12,7 @@ import { BLOG_ROUTE, ITEM_ROUTE, MAIN_ROUTE } from "../configs/routerLinks";
 import { MenuItem, Menu, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import image from './logo-white.png'
+import image from "./logo-white.png";
 
 console.log(image);
 
