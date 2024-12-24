@@ -18,7 +18,7 @@ export default function ItemUser({ item }) {
          height={"100%"}
          overflow={"hidden"}
       >
-         <Box component={"img"} src={item?.img?.path} alt={item?.img?.name} />
+         <Box loading='lazy' component={"img"} src={item?.img?.path} alt={item?.img?.name} />
          {/* <Box position={"relative"} width={"100%"}>
             <Image src={item?.img?.path} alt={item?.img?.name} layout="fill" />
          </Box> */}
