@@ -34,7 +34,7 @@ export default function About() {
                   color="secondary.main"
                   sx={{ fontSize: { xs: "20px", md: "24" } }}
                >
-                  NewWayLab – Ароматизатори для електронних сигарет №1 в
+                  NewWayLab – харчові ароматизатори №1 в
                   Україні. Створюємо найкраще з 2017 року.
                </Typography>
                <Typography

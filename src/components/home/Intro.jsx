@@ -43,7 +43,7 @@ export default function Intro() {
                         textTransform={"uppercase"}
                         color="secondary.main"
                      >
-                        Виробник №1 ароматизаторів для електроних сигарет в
+                        Виробник №1 харчових ароматизаторів в
                         Україні
                      </Typography>
                      <Box display={"flex"} justifyContent={"center"} gap={2}>
