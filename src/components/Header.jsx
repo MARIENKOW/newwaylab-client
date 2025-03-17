@@ -14,7 +14,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import image from "./logo-white.png";
 
-console.log(image);
 
 export const Header = () => {
    const theme = useTheme();
