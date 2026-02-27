@@ -28,7 +28,7 @@
     "draftjs-to-html": "^0.9.1",
     "mobx": "^6.13.5",
     "mobx-react-lite": "^4.0.7",
-    "next": "15.0.3",
+    "next": "^15.5.12",
     "next-auth": "^4.24.10",
     "notistack": "^3.0.1",
     "novel": "^0.5.0",
@@ -38,7 +38,7 @@
     "react-hook-form": "^7.53.2",
     "sass": "^1.81.0",
     "styled-components": "^6.1.13",
-    "swiper": "^11.1.15"
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@types/node": "22.10.0",
